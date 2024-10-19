@@ -1,0 +1,143 @@
+/* Menu Button */
+.menu-btn {
+    position: fixed;
+    top: 8px;
+    right: 100px; /* Align the button to the right */
+    font-size: 30px; /* Adjust size of the icon */
+    color: #333;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100; /* Ensure it's on top */
+    transform: rotate(90deg);
+}
+
+/* .menu-btn:hover {
+    color: #555; /* Add a hover effect */
+    /* transform: rotate(90deg); Rotate on hover for a dynamic effect */
+/* } */ *
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth opening transition */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+/* Show dropdown content when .show class is added */
+.dropdown-content.show {
+    display: block;
+    max-height: 300px; /* Adjust max-height to fit the content */
+    opacity: 1;
+}
+
+/* Dropdown Button Styling */
+.dropbtn {
+    background-color: #f9f9f9; /* Light background for dropdown button */
+    color: #333;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #e0e0e0;
+    padding-left: 20px; /* Smooth padding shift on hover */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333; /* Dark background for the sidebar */
+    padding-top: 60px;
+    transition: left 0.4s ease, background-color 0.3s ease; /* Smooth transition for opening */
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0; /* Show the sidebar when open */
+    background-color: #444; /* Change background color when opened */
+}
+
+/* Close Button for Sidebar */
+.close-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+/* Sidebar Title */
+.sidebar-title {
+    color: white;
+    padding: 10px 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Sidebar Links */
+.dropdown-content a {
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    color: #ddd;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+    color: #fff;
+    padding-left: 15px; /* Add slight padding on hover for better UX */
+}
+
+/* Blurred Background When Sidebar is Open */
+.content.blur {
+    filter: blur(4px); /* More noticeable blur */
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .menu-btn {
+        top: 10px;
+        right: 10px;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+    }
+
+    .dropdown-content.show {
+        max-height: 500px; /* Increase for mobile view */
+    }
+}

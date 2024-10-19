@@ -1,0 +1,36 @@
+/* parallax.css */
+.parallax-section {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+      url('file:///D:/HARSH/SEM/python project temp/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .parallax-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .parallax-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .parallax-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .parallax-scroll {
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .parallax-scroll.scrolled {
+    transform: translateY(-50%);
+  }

@@ -1,0 +1,194 @@
+/* Container styling with background */
+.add-blog-container {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background animation */
+.add-blog-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    filter: blur(120px);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    animation: floating 8s ease-in-out infinite;
+}
+
+.add-blog-container::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 0;
+}
+
+/* Floating animation for background */
+@keyframes floating {
+    0% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(20px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+/* Form wrapper with relative z-index */
+.add-blog-form-wrapper {
+    width: 100%;
+    max-width: 600px;
+    z-index: 10;
+}
+
+/* Card styling with subtle animation */
+.add-blog-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.add-blog-card:hover {
+    transform: translateY(-10px); /* Lift the card when hovered */
+}
+
+.add-blog-card-body {
+    padding: 2rem;
+}
+
+/* Title styling with fade-in animation */
+.add-blog-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Input group styling with focus transition */
+.add-blog-input-group {
+    margin-bottom: 1.5rem;
+}
+
+.add-blog-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 500;
+}
+
+.add-blog-input, .add-blog-select, .add-blog-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.add-blog-input:focus, .add-blog-select:focus, .add-blog-textarea:focus {
+    border-color: #007bff;
+}
+
+/* Textarea styling */
+.add-blog-textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Checkbox group */
+.add-blog-checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.add-blog-checkbox {
+    margin-right: 0.5rem;
+}
+
+.add-blog-checkbox-label {
+    font-size: 1rem;
+}
+
+/* Button with hover animation */
+.add-blog-submit-btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.add-blog-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: left 0.4s ease;
+}
+
+.add-blog-submit-btn:hover::before {
+    left: 100%;
+}
+
+.add-blog-submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Success/Error message styling */
+.add-blog-success-message {
+    color: green;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.add-blog-error-message {
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}

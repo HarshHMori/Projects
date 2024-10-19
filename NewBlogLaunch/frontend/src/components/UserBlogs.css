@@ -1,0 +1,91 @@
+/* Styling for the main container */
+.unique-user-blogs-section {
+    padding: 40px;
+    background-color: #A66E38;
+    min-height: 100vh;
+}
+
+/* Title styling */
+.unique-user-blogs-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Message styling */
+.unique-user-message {
+    text-align: center;
+    color: #d9534f;
+    margin-bottom: 30px;
+}
+
+/* Blog list styling */
+.unique-user-blog-entries {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Individual blog styling */
+.unique-user-blog-entry {
+    background-color: #FFEEAD;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Visibility animation */
+.unique-user-blog-entry.visible {
+    opacity: 1;
+}
+
+/* Blog content styling */
+.unique-blog-content h3 {
+    font-size: 1.8rem;
+    color: #013220;
+    margin-bottom: 20px;
+}
+
+.unique-blog-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.unique-blog-content strong {
+    font-weight: bold;
+    color: #3B3B3B;
+}
+
+/* Thumbnail styling */
+.unique-user-blog-thumbnail img {
+    margin-top: 10px;
+    border-radius: 4px;
+    object-fit: fill;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.unique-blog-actions {
+    margin-top: 20px;
+}
+
+.unique-blog-actions .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.unique-blog-actions .btn-info {
+    background-color: #0288D1;
+}
+
+.unique-blog-actions .btn-success {
+    background-color: #4CAF50;
+}

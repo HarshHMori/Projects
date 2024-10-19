@@ -1,0 +1,294 @@
+/* General Styling
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+  } */
+  
+  /* Parallax Section*/
+  .parallax-section {
+    position: relative;
+    background-image: url("https://picsum.photos/200/300"); /* Replace with your image path */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .parallax-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .parallax-section h1 {
+    font-size: 3rem;
+  }
+  
+  .parallax-section p {
+    font-size: 1.2rem;
+  } 
+  
+  /* Featured Blog Section
+  .featured-blog img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .featured-blog h2 {
+    font-size: 2rem;
+  }
+  
+  .featured-blog p {
+    font-size: 1rem;
+    line-height: 1.6;
+  } */
+  
+  /* Blog Cards */
+  /* .card {
+    margin-bottom: 30px;
+    border: none;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  } */
+  
+  /* Media Queries */
+  /* @media (max-width: 768px) {
+    .parallax-section {
+      height: 300px;
+    }
+  
+    .parallax-section h1 {
+      font-size: 2rem;
+    }
+  
+    .parallax-section p {
+      font-size: 1rem;
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+    }
+  } */
+
+  /* General Styling */
+.blog-body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #b9b9ed;
+}
+
+/* Parallax Section */
+/* .parallax-section {
+  height: 60vh;
+  background-image: url('https://source.unsplash.com/1600x900/?nature,blog');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.parallax-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.parallax-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.parallax-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.parallax-content .btn {
+  padding: 10px 20px;
+  font-size: 18px;
+} */
+
+/* Featured Blog Section */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(249, 188, 240);
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.heading{
+  text-align: center;
+  box-shadow: 4px 4px 4px 4px #472a2a88;
+  color: #fff;
+}
+
+.lead {
+  font-size: 20px;
+  color: #555;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Card Styling */
+.card-blog {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.card-blog:hover {
+  transform: scale(1.05);
+}
+
+.blog-img-top {
+  height: 200px;
+  object-fit: fill;
+}
+
+.card-body-blog {
+  padding: 20px;
+}
+
+.card-blog-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-blog-text {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+/* Latest Blogs Grid */
+.row-blog {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogs {
+  flex: 1;
+  margin: 15px;
+}
+
+/* Ensure Cards are Same Size */
+.card-blog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-blogs{
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(206, 253, 255, 0.71);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .parallax-section {
+      height: 40vh;
+  }
+
+  .parallax-content h1 {
+      font-size: 32px;
+  }
+
+  .parallax-content p {
+      font-size: 16px;
+  }
+
+  .row-blog {
+      flex-direction: column;
+  }
+}
